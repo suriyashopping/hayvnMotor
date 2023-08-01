@@ -29,11 +29,14 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 
-GitHub Link
+## GitHub Link
+
 https://github.com/suriyashopping/hayvnMotor
 
-**Shopping Cart Story: HayvnMotors **
+## Shopping Cart Story: ** HayvnMotors **
+
 - Listing All Products as landing page
+- Product listing has done by using progressive rendering method to improve application performance.
 - Dynamic Categories Menu List on header
 - Dynamic routing for each categories
 - Product List Card which include product name, model, category, product image
@@ -42,21 +45,21 @@ https://github.com/suriyashopping/hayvnMotor
 **Product Overview:**
 - Product Overview Card which include title, category, product image, description, specifications, Add to Cart option like "Buy Now" button and Add / remove Quantity
 
-**Add to Cart**
+### Add to Cart
 
 - User can add product to their guest cart
 - User can add multi quantity for each product in the same product detail page and max quantity limit is 10 and shows validation respectively.
 - User can add or reduce quantity and also can remove it from cart
 - Users can find the count of products on the header's cart option which is placed at the top right side of the header.
 
-**Cart List**
+### Cart List
 
 - User can view the shopping cart list while clicking on the header's cart icon at top right
 - User can delete product from cart by using delete icon- User can add or reduce quantity and also can remove it from cart
 - Cart product, count, Total amount all are handled in the global store by using NgRx.
 - Changes will be reflected immediately throughout the app, if we made changes because of the global state manager using NgRx.
 
-**Retain data handled on page refresh**
+### Retain data handled on page refresh
 
 -  Retain data handling for Cart List and already selected cart products on Product Listing Page on/after page refresh.
 -  Retaining NgRx store data handled and will work for the entire hayvnmotors application.
