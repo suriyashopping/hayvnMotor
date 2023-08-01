@@ -1,0 +1,226 @@
+{
+    "hotSale": [
+    {
+        "name": "Sand Crawler", 
+        "model": "Digger Crawler", 
+        "manufacturer": "Corellia Mining Corporation", 
+        "cost_in_credits": "150000", 
+        "length": "36.8 ", 
+        "max_atmosphering_speed": "30", 
+        "crew": "46", 
+        "passengers": "30", 
+        "cargo_capacity": "50000", 
+        "consumables": "2 months", 
+        "vehicle_class": "wheeled", 
+        "pilots": [], 
+        "films": [
+            "https://swapi.dev/api/films/1/", 
+            "https://swapi.dev/api/films/5/"
+        ], 
+        "created": "2014-12-10T15:36:25.724000Z", 
+        "edited": "2014-12-20T21:30:21.661000Z", 
+        "url": "https://swapi.dev/api/vehicles/4/"
+    }, 
+    {
+        "name": "T-16 skyhopper", 
+        "model": "T-16 skyhopper", 
+        "manufacturer": "Incom Corporation", 
+        "cost_in_credits": "14500", 
+        "length": "10.4 ", 
+        "max_atmosphering_speed": "1200", 
+        "crew": "1", 
+        "passengers": "1", 
+        "cargo_capacity": "50", 
+        "consumables": "0", 
+        "vehicle_class": "repulsorcraft", 
+        "pilots": [], 
+        "films": [
+            "https://swapi.dev/api/films/1/"
+        ], 
+        "created": "2014-12-10T16:01:52.434000Z", 
+        "edited": "2014-12-20T21:30:21.665000Z", 
+        "url": "https://swapi.dev/api/vehicles/6/"
+    }, 
+    {
+        "name": "X-34 landspeeder", 
+        "model": "X-34 landspeeder", 
+        "manufacturer": "SoroSuub Corporation", 
+        "cost_in_credits": "10550", 
+        "length": "3.4 ", 
+        "max_atmosphering_speed": "250", 
+        "crew": "1", 
+        "passengers": "1", 
+        "cargo_capacity": "5", 
+        "consumables": "unknown", 
+        "vehicle_class": "repulsorcraft", 
+        "pilots": [], 
+        "films": [
+            "https://swapi.dev/api/films/1/"
+        ], 
+        "created": "2014-12-10T16:13:52.586000Z", 
+        "edited": "2014-12-20T21:30:21.668000Z", 
+        "url": "https://swapi.dev/api/vehicles/7/"
+    },
+    {
+        "name": "Storm IV Twin-Pod cloud car", 
+        "model": "Storm IV Twin-Pod", 
+        "manufacturer": "Bespin Motors", 
+        "cost_in_credits": "75000", 
+        "length": "7", 
+        "max_atmosphering_speed": "1500", 
+        "crew": "2", 
+        "passengers": "0", 
+        "cargo_capacity": "10", 
+        "consumables": "1 day", 
+        "vehicle_class": "repulsorcraft", 
+        "pilots": [], 
+        "films": [
+            "https://swapi.dev/api/films/2/"
+        ], 
+        "created": "2014-12-15T12:58:50.530000Z", 
+        "edited": "2014-12-20T21:30:21.681000Z", 
+        "url": "https://swapi.dev/api/vehicles/20/"
+    }, 
+    {
+        "name": "Sail barge", 
+        "model": "Modified Luxury Sail Barge", 
+        "manufacturer": "Ubrikkian Industries Custom Vehicle Division", 
+        "cost_in_credits": "285000", 
+        "length": "30", 
+        "max_atmosphering_speed": "100", 
+        "crew": "26", 
+        "passengers": "500", 
+        "cargo_capacity": "2000000", 
+        "consumables": "Live food tanks", 
+        "vehicle_class": "sail barge", 
+        "pilots": [], 
+        "films": [
+            "https://swapi.dev/api/films/3/"
+        ], 
+        "created": "2014-12-18T10:44:14.217000Z", 
+        "edited": "2014-12-20T21:30:21.684000Z", 
+        "url": "https://swapi.dev/api/vehicles/24/"
+    },
+    {
+        "name": "CR90 corvette", 
+        "model": "CR90 corvette", 
+        "manufacturer": "Corellian Engineering Corporation", 
+        "cost_in_credits": "3500000", 
+        "length": "150", 
+        "max_atmosphering_speed": "950", 
+        "crew": "30-165", 
+        "passengers": "600", 
+        "cargo_capacity": "3000000", 
+        "consumables": "1 year", 
+        "hyperdrive_rating": "2.0", 
+        "MGLT": "60", 
+        "starship_class": "corvette", 
+        "pilots": [], 
+        "films": [
+            "https://swapi.dev/api/films/1/", 
+            "https://swapi.dev/api/films/3/", 
+            "https://swapi.dev/api/films/6/"
+        ], 
+        "created": "2014-12-10T14:20:33.369000Z", 
+        "edited": "2014-12-20T21:23:49.867000Z", 
+        "url": "https://swapi.dev/api/starships/2/"
+    }, 
+    {
+        "name": "Star Destroyer", 
+        "model": "Imperial I-class Star Destroyer", 
+        "manufacturer": "Kuat Drive Yards", 
+        "cost_in_credits": "150000000", 
+        "length": "1,600", 
+        "max_atmosphering_speed": "975", 
+        "crew": "47,060", 
+        "passengers": "n/a", 
+        "cargo_capacity": "36000000", 
+        "consumables": "2 years", 
+        "hyperdrive_rating": "2.0", 
+        "MGLT": "60", 
+        "starship_class": "Star Destroyer", 
+        "pilots": [], 
+        "films": [
+            "https://swapi.dev/api/films/1/", 
+            "https://swapi.dev/api/films/2/", 
+            "https://swapi.dev/api/films/3/"
+        ], 
+        "created": "2014-12-10T15:08:19.848000Z", 
+        "edited": "2014-12-20T21:23:49.870000Z", 
+        "url": "https://swapi.dev/api/starships/3/"
+    }, 
+    {
+        "name": "Sentinel-class landing craft", 
+        "model": "Sentinel-class landing craft", 
+        "manufacturer": "Sienar Fleet Systems, Cyngus Spaceworks", 
+        "cost_in_credits": "240000", 
+        "length": "38", 
+        "max_atmosphering_speed": "1000", 
+        "crew": "5", 
+        "passengers": "75", 
+        "cargo_capacity": "180000", 
+        "consumables": "1 month", 
+        "hyperdrive_rating": "1.0", 
+        "MGLT": "70", 
+        "starship_class": "landing craft", 
+        "pilots": [], 
+        "films": [
+            "https://swapi.dev/api/films/1/"
+        ], 
+        "created": "2014-12-10T15:48:00.586000Z", 
+        "edited": "2014-12-20T21:23:49.873000Z", 
+        "url": "https://swapi.dev/api/starships/5/"
+    }, 
+    {
+        "name": "Death Star", 
+        "model": "DS-1 Orbital Battle Station", 
+        "manufacturer": "Imperial Department of Military Research, Sienar Fleet Systems", 
+        "cost_in_credits": "1000000000000", 
+        "length": "120000", 
+        "max_atmosphering_speed": "n/a", 
+        "crew": "342,953", 
+        "passengers": "843,342", 
+        "cargo_capacity": "1000000000000", 
+        "consumables": "3 years", 
+        "hyperdrive_rating": "4.0", 
+        "MGLT": "10", 
+        "starship_class": "Deep Space Mobile Battlestation", 
+        "pilots": [], 
+        "films": [
+            "https://swapi.dev/api/films/1/"
+        ], 
+        "created": "2014-12-10T16:36:50.509000Z", 
+        "edited": "2014-12-20T21:26:24.783000Z", 
+        "url": "https://swapi.dev/api/starships/9/"
+    }, 
+    {
+        "name": "Millennium Falcon", 
+        "model": "YT-1300 light freighter", 
+        "manufacturer": "Corellian Engineering Corporation", 
+        "cost_in_credits": "100000", 
+        "length": "34.37", 
+        "max_atmosphering_speed": "1050", 
+        "crew": "4", 
+        "passengers": "6", 
+        "cargo_capacity": "100000", 
+        "consumables": "2 months", 
+        "hyperdrive_rating": "0.5", 
+        "MGLT": "75", 
+        "starship_class": "Light freighter", 
+        "pilots": [
+            "https://swapi.dev/api/people/13/", 
+            "https://swapi.dev/api/people/14/", 
+            "https://swapi.dev/api/people/25/", 
+            "https://swapi.dev/api/people/31/"
+        ], 
+        "films": [
+            "https://swapi.dev/api/films/1/", 
+            "https://swapi.dev/api/films/2/", 
+            "https://swapi.dev/api/films/3/"
+        ], 
+        "created": "2014-12-10T16:59:45.094000Z", 
+        "edited": "2014-12-20T21:23:49.880000Z", 
+        "url": "https://swapi.dev/api/starships/10/"
+    }
+]
+}

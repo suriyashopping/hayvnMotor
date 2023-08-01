@@ -1,0 +1,138 @@
+<div class="container product-overview">
+    <div class="row mt-3">
+    <section class="col-lg-6" *ngIf="ProductDetails?.images?.length">
+        <div class="product-gallery__featured">
+            <owl-carousel-o [options]="customOptions" #owlCar>
+                <ng-container *ngFor="let slide of ProductDetails.images; let i = index">
+                  <ng-template carouselSlide [id]="slide.key">
+                    <img [src]="slide.url" [width]="imageSize">
+                  </ng-template>
+                </ng-container>
+            </owl-carousel-o>
+        </div>
+        <div class="product-gallery__carousel">
+            <owl-carousel-o [options]="{items:4, dots:false, margin:5, autoWidth: true}">
+            <ng-container *ngFor="let image of ProductDetails.images; let i = index">
+                <ng-template carouselSlide [id]="image.key" [width]="80">
+                <a (click)="owlCar.to(image.key); changeimage(image.key)">
+                    <img [src]="image.url"
+                        [ngClass]="{'product-gallery__carousel-item--active':selectedImage === image.key || (i == 0 && !selectedImage)}">
+                </a>
+                </ng-template>
+            </ng-container>
+            </owl-carousel-o>
+        </div>
+    </section>
+    <section class="offset-lg-1 col-lg-5" *ngIf="ProductDetails">
+        <figure>
+            <h1 class="text-tint-blue">{{ProductDetails.name}}</h1>
+            <mat-divider class="spec-divider"></mat-divider>
+        </figure>
+        <h4>
+            <div class="d-inline-flex flex-column w-50"><h5><label for="">Model </label></h5></div>
+            <div class="d-inline-flex flex-column w-50"><h6>{{ProductDetails.model}}</h6></div>
+        </h4>
+        <h4>
+            <div class="d-inline-flex flex-column w-50"><h5><label for="">Passengers </label></h5></div>
+            <div class="d-inline-flex flex-column w-50"><h6>{{ProductDetails.passengers}}</h6></div>
+        </h4>
+        <h4>
+            <div class="d-inline-flex flex-column w-50"><h5><label for="">Crew </label></h5></div>
+            <div class="d-inline-flex flex-column w-50"><h6>{{ProductDetails.crew}}</h6></div>
+        </h4>
+        <h4>
+            <div class="d-inline-flex flex-column w-50"><h5><label for="">Cargo capacity </label></h5></div>
+            <div class="d-inline-flex flex-column w-50"><h6>{{ProductDetails.cargo_capacity}}</h6></div>
+        </h4>
+        <h4 *ngIf="ProductDetails.cost_in_credits !== 'unknown' else OutOfStock">
+            <div class="d-inline-flex flex-column w-50">
+                <h5><label for="">Price </label></h5>
+            </div>
+            <div class="d-inline-flex flex-row w-50">R <h5 class="d-flex pt-lg-1 ps-1">{{ProductDetails.cost_in_credits}}</h5>&nbsp;&nbsp;<ng-container *ngTemplateOutlet="InStock"></ng-container></div>
+        </h4>
+        <div class="row">
+            <div class="product-qty col-6" *ngIf="ProductDetails.cost_in_credits !== 'unknown'">
+                <h6 class="d-inline-block"><label for="quantity" class="d-inline-block pe-3">Qty</label></h6>
+                <div class="value-button decrease" (click)="updateCartQty('decrease', productQty)">-</div>
+                <input type="number" class="qty-number" [value]="productQty" [readOnly]="true" />
+                <div class="value-button increase" (click)="updateCartQty('increase', productQty)">+</div>
+                <small *ngIf="showMAxQtyWarn" class="d-block text-warning">Max quantity limit is {{productQty}}</small>
+            </div>
+            <div class="row col-6">
+                <button mat-raised-button color="primary" class="buynow" (click)="addToCart()" *ngIf="ProductDetails.cost_in_credits !== 'unknown'">Buy Now</button>
+            </div>
+        </div>
+        <div class="row mt-5 text-info">
+            <small>Note: Please check below Specifications section for more info</small>
+        </div>
+    </section>
+    </div>
+    <div class="row mt-5">
+        <h2>Specifications</h2>
+        <mat-divider class="spec-divider"></mat-divider>
+        <div *ngIf="ProductDetails else NoRecordFound">
+            <div class="d-flex pt-3 pb-3">
+                <div class="w-50 flex-column"><h5>Name</h5>
+                    <div class="">{{ProductDetails.name}}</div>
+                </div>
+                <div class="w-50 flex-column"><h5>Model</h5>
+                    <div class="">{{ProductDetails.model}}</div>
+                </div>
+            </div>
+            <mat-divider class="color-muted"></mat-divider>
+            <div class="d-flex pt-3 pb-3">
+                <div class="w-50 flex-column"><h5>Passengers</h5>
+                    <div class="">{{ProductDetails.passengers}}</div>
+                </div>
+                <div class="w-50 flex-column"><h5>Crew</h5>
+                    <div class="">{{ProductDetails.crew}}</div>
+                </div>
+            </div>
+            <mat-divider class="color-muted"></mat-divider>
+            <div class="d-flex pt-3 pb-3">
+                <div class="w-50 flex-column"><h5>Cargo Capacity</h5>
+                    <div class="">{{ProductDetails.cargo_capacity}}</div>
+                </div>
+                <div class="w-50 flex-column"><h5>Consumables</h5>
+                    <div class="">{{ProductDetails.consumables}}</div>
+                </div>
+            </div>
+            <mat-divider class="color-muted"></mat-divider>
+            <div class="d-flex pt-3 pb-3">
+                <div class="w-50 flex-column"><h5>Max Atmosphering Speed</h5>
+                    <div class="">{{ProductDetails.max_atmosphering_speed}}</div>
+                </div>
+                <div class="w-50 flex-column"><h5>Vehicle Class</h5>
+                    <div class="">{{ProductDetails.vehicle_class}}</div>
+                </div>
+            </div>
+            <mat-divider class="color-muted"></mat-divider>
+            <div class="d-flex pt-3 pb-3">
+                <div class="w-50 flex-column"><h5>Length</h5>
+                    <div class="">{{ProductDetails.length}}</div>
+                </div>
+                <div class="w-50 flex-column"><h5>Manufactured By</h5>
+                    <div class="">{{ProductDetails.manufacturer}}</div>
+                </div>
+            </div>
+            <mat-divider class="color-muted"></mat-divider>
+            <div class="d-flex pt-3 pb-3 mb-5">
+                <div class="w-50 flex-column"><h5>Created On</h5>
+                    <div class="">{{ProductDetails.created | date: 'dd-MMM-YYYY HH:mm:ss'}}</div>
+                </div>
+                <div class="w-50 flex-column"><h5>Modified On</h5>
+                    <div class="">{{ProductDetails.edited | date: 'dd-MMM-YYYY HH:mm:ss'}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<ng-template #InStock>
+    <small class="stock in-stock pt-lg-1">In Stock</small>
+</ng-template>
+<ng-template #OutOfStock>
+    <button mat-raised-button color="warn" style="pointer-events: none;">Out of Stock</button>
+</ng-template>
+<ng-template #NoRecordFound>
+    <strong class="stock out-stock text-center p-5" style="min-height: 425px;">No Record Found!</strong>
+</ng-template>

@@ -19,10 +19,21 @@
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
+    "resolveJsonModule": true,
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@HayvnApp/*": ["src/app/*"],
+      "@HayvnCore/*": ["src/app/core/*"],
+      "@HayvnFeatures/*": ["src/app/features/*"],
+      "@HayvnShared/*": ["src/app/shared/*"],
+      "@HayvnStore/*": ["src/app/store/*"],
+      "@HayvnSharedHttpService/*": ["src/app/shared/services/common-http/*"],
+      "@HayvnEnv/*": ["src/environments/*"],
+      "@HayvnAssets/*": ["src/assets/*"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

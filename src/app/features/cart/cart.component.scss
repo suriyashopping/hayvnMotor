@@ -1,0 +1,15 @@
+.custom-height {
+    min-height: calc(100vh/1.4);
+    table {
+        width: 100%;
+    }
+    .cart-product-img {
+        width: 100%;
+    }
+    .checkout {
+        background-color: #FF9500;
+    }
+    .border-left {
+        border-left: 1px solid #d3d3d3 !important;
+    }
+}
