@@ -1,1 +1,75 @@
 /* You can add global styles to this file, and also import other style files */
+.header-container.header-bg {
+    background: #1b2c34;
+    opacity: 1;
+    .logo-brand {
+        color: #FF9500;
+        font-size: 18px;
+        font-weight: 500;
+        display: inline-block;
+        position: relative;
+        top: 7px;
+        font-style: italic;
+    }
+    #navbarNavDropdown ul li a {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 700;
+        font-style: normal;
+        padding: 0 20px;
+    }
+}
+.text-tint-blue {
+    color: #1b2c34;
+}
+
+/* increase / decrease cart qty option css start here */
+.value-button {
+    display: inline-block;
+    border: 1px solid #ddd;
+    margin: 0px;
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 6px 0;
+    background: #eee;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.value-button:hover {
+    cursor: pointer;
+}
+
+.decrease {
+margin-right: -4px;
+    border-radius: 8px 0 0 8px;
+}
+
+.increase {
+    margin-left: -4px;
+    border-radius: 0 8px 8px 0;
+}
+
+input.qty-number {
+    text-align: center;
+    border: none;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin: 0px;
+    width: 36px;
+    height: 36px;
+    top: 3px;
+    position: relative;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

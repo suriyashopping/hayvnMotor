@@ -1,0 +1,51 @@
+.productlist-container {
+    .example-card {
+        max-width: 400px;
+    }
+
+    .hotsale-header-image {
+        background-image: url('../../../assets//images/hot-sale.png');
+        background-size: cover;
+    }
+    .justify-end {
+        justify-content: flex-end;
+    }
+    mat-card-header {
+        padding: 16px 0 16px 0;
+    }
+    .stock {
+        font-weight: 500;
+        &.in-stock {
+            color: #1f7e07;
+        }
+        &.out-stock {
+            color: #c70d0d;
+        }
+    }
+    .font-gray {
+        color: #726c6c;
+        font-size: 15px;
+        font-weight: 500;
+        padding-left: 2px;
+    }
+}
+.scrolltop-container {
+    position: sticky;
+    bottom: 35px;
+    text-align: right;
+}
+
+// media query start over here
+@media only screen and (min-width: 992px) {
+    .scrolltop-container {
+        position: sticky;
+        bottom: 35px;
+        text-align: right;
+        button.scroll-top {
+            position: absolute;
+            bottom: 0px;
+            right: -80px;
+        }
+    }
+}
+// media query end over here
