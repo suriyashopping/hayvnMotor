@@ -35,6 +35,7 @@ https://github.com/suriyashopping/hayvnMotor
 
 ## Shopping Cart Story: ** HayvnMotors **
 
+### Product List
 - Listing All Products as landing page
 - Product listing has done by using progressive rendering method to improve application performance.
 - Dynamic Categories Menu List on header
@@ -42,7 +43,8 @@ https://github.com/suriyashopping/hayvnMotor
 - Product List Card which include product name, model, category, product image
 - Card footer contains Product Price, View more Option
 - User can view all the products while click on logo or All Products menu- Users can search for products by using the browse option which is placed on the header section.
-**Product Overview:**
+
+###  Product Overview
 - Product Overview Card which include title, category, product image, description, specifications, Add to Cart option like "Buy Now" button and Add / remove Quantity
 
 ### Add to Cart
