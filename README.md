@@ -37,20 +37,22 @@ https://github.com/suriyashopping/hayvnMotor
 
 ### Product List
 - Listing All Products as landing page
-- Product listing has done by using progressive rendering method to improve application performance.
+- Product listing has done by using progressive rendering method to improve application performance. So that product listing on demond based on user scroll bit by bit.
 - Dynamic Categories Menu List on header
 - Dynamic routing for each categories
 - Product List Card which include product name, model, category, product image
 - Card footer contains Product Price, View more Option
 - User can view all the products while click on logo or All Products menu- Users can search for products by using the browse option which is placed on the header section.
+- Scroll to Top option will be appear once user start scroll down and can scroll to top easily while click on scrollToTop option which placed on bottom right
 
 ###  Product Overview
 - Product Overview Card which include title, category, product image, description, specifications, Add to Cart option like "Buy Now" button and Add / remove Quantity
+- Images are display on carousal slider with thumbnail images option. so that user can easily switch any of images respectively without wait for next carousal looping
 
 ### Add to Cart
 
 - User can add product to their guest cart
-- User can add multi quantity for each product in the same product detail page and max quantity limit is 10 and shows validation respectively.
+- User can add multi quantity for each product in the same product detail page and max quantity limited to add cart is 10 and shows validation respectively.
 - User can add or reduce quantity and also can remove it from cart
 - Users can find the count of products on the header's cart option which is placed at the top right side of the header.
 
@@ -60,6 +62,12 @@ https://github.com/suriyashopping/hayvnMotor
 - User can delete product from cart by using delete icon- User can add or reduce quantity and also can remove it from cart
 - Cart product, count, Total amount all are handled in the global store by using NgRx.
 - Changes will be reflected immediately throughout the app, if we made changes because of the global state manager using NgRx.
+
+### Routing with lazy load concepts
+- We split up main feature into three sub modules, like product listing, product detail view, cart view module respectively.
+- Initially product listing page module and related directive, service resources only download from server to client/browser
+- All other feature module resources won't be load at a time.
+- All page resources load on demond based on user's page navigation with the help of lazy loading concept. So that we can improve the performance of application. 
 
 ### Retain data handled on page refresh
 
