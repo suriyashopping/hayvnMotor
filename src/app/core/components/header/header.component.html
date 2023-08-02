@@ -6,40 +6,39 @@
                 <!-- <span class="logo-brand">Hayvn</span> -->
                 <a routerLink="/"><img src="./../../../../assets/images/logo.png" alt="" srcset=""></a>
             </div>
-            <div class="col-lg-10">
-                <div class="row">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" matInput data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="col-lg-5 col-4 text-center">
+                <div class="">
+                    <button (click)="navbarCollapsed = !navbarCollapsed" class="navbar-toggler" type="button" data-bs-toggle="collapse" matInput data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                         </button>
-                        <div class="collapse navbar-collapse col-lg-5" id="navbarNavDropdown">
+                        <div [class.collapse]="navbarCollapsed" class="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul class="navbar-nav main-nav-menu">
                             <li class="nav-item" *ngFor="let menu of MAINMENULIST">
                                 <a class="nav-link active" [routerLink]="['/hayvn', menu.path]">{{menu.text | uppercase}}</a>
                             </li>
                         </ul>
                         </div>
-                        <div class="col-lg-6 search-container">
-                            <input type="text" matInput [(ngModel)]="value" (focus)="showSearchResult = true" #searchBox (input)="searchBox.value.length>1 && searchProduct(searchBox.value, $event)" class="search-product" name="searchProduct" id="searchProduct" placeholder="search products by product name, model">
-                            <div class="search-result" #searchResult [ngClass]="(showSearchResult && searchProductResult.length)? 'd-block': 'd-none'">
-                                <ul>
-                                    <li class="search-product-listing" *ngFor="let product of searchProductResult" [routerLink]="['/hayvn', 'overview', getCategoryName(product.url), getProductId(product.url)]" (click)="showSearchResult = false">
-                                        <h5>{{product.name}}</h5>
-                                        <h6>{{product.model}}</h6>
-                                    </li>
-                                </ul>
-                            </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-12">
+                <div class="row pt-2">
+                    <div class="col-lg-10 col-9 search-container">
+                        <input type="text" matInput [(ngModel)]="value" (focus)="showSearchResult = true" #searchBox (input)="searchBox.value.length>1 && searchProduct(searchBox.value, $event)" class="search-product" name="searchProduct" id="searchProduct" placeholder="search products by product name, model">
+                        <div class="search-result" #searchResult [ngClass]="(showSearchResult && searchProductResult.length)? 'd-block': 'd-none'">
+                            <ul>
+                                <li class="search-product-listing" *ngFor="let product of searchProductResult" [routerLink]="['/hayvn', 'overview', getCategoryName(product.url), getProductId(product.url)]" (click)="showSearchResult = false">
+                                    <h5>{{product.name}}</h5>
+                                    <h6>{{product.model}}</h6>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="example-button-container col-lg-1 pe-3">
-                            <button mat-mini-fab class="float-end" color="primary" aria-label="Example icon button with a menu icon" [routerLink]="['hayvn','cart-view']">
-                                <mat-icon>shopping_cart</mat-icon>
-                                <span *ngIf="(userCart$ | async)?.cartProduct?.length">{{(userCart$ | async)?.cartProduct?.length}}</span>
-                            </button>
-                        </div>
-                        <!-- <div class="example-button-container col-lg-1">
-                            <button mat-button style="color: #fff;" aria-label="Example icon button with a menu icon">
-                                Login
-                            </button>
-                        </div> -->
+                    </div>
+                    <div class="example-button-container col-lg-2 pe-3 col-2">
+                        <button mat-mini-fab class="float-end" color="primary" aria-label="Example icon button with a menu icon" [routerLink]="['hayvn','cart-view']">
+                            <mat-icon>shopping_cart</mat-icon>
+                            <span *ngIf="(userCart$ | async)?.cartProduct?.length">{{(userCart$ | async)?.cartProduct?.length}}</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </nav>

@@ -19,6 +19,7 @@ export class HeaderComponent implements OnInit {
   private search$ = new BehaviorSubject('');
   private destroy$ = new Subject<void>();
   searchProductResult: ProductDetailView[] = [];
+  navbarCollapsed = true;
 
   @ViewChild('searchResult') searchResult: any;
 
