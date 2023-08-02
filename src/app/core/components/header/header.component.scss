@@ -1,3 +1,6 @@
+.navbar .navbar-toggler {
+    background: #fff !important;
+  }
 .search-container {
     position: relative;
     .search-product {
@@ -37,4 +40,22 @@
         }
     }
 
+}
+
+// media query start over here
+@media only screen and (max-width: 991px) {
+    .header-container.header-bg {
+        #navbarNavDropdown {
+            position: absolute;
+            z-index: 1;
+            background: #fff;
+            ul li {
+                border-bottom: 1px solid #d3d3d3;
+                padding: 10px 0;
+                a {
+                    color: #000;
+                }
+            } 
+        }
+    }
 }
